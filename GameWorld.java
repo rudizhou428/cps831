@@ -10,9 +10,7 @@ public class GameWorld{
     Scanner in = new Scanner(System.in);
     System.out.println("Please enter an option number");
     System.out.println("1. Buy game credit\n2. Play a game\n3. Quit");
-    while(!in.hasNextInt()){
-      in.next();
-    }
+  
     choice = in.nextInt();
     switch (choice){
     case 1:
