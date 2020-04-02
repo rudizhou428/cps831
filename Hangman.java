@@ -13,7 +13,12 @@ public class Hangman {
  private static String asterisk = new String(new char[word.length()]).replace("\0", "*");
  private static int count = 0;
 
- public static void mainHang(/*String[] args*/) {
+ public void mainHang() {
+
+ word = words[(int) (Math.random() * words.length)];
+ asterisk = new String(new char[word.length()]).replace("\0", "*");
+ count = 0;
+ 
   Scanner sc = new Scanner(System.in);
 
   while (count < 7 && asterisk.contains("*")) {
@@ -22,7 +27,7 @@ public class Hangman {
    String guess = sc.next();
    hang(guess);
   }
-  sc.close();
+ // sc.close();
  }
 
  public static void hang(String guess) {
