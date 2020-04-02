@@ -1,0 +1,9 @@
+Run:
+
+docker build .
+docker run -i -t [yourbuildnumber]
+
+ex.
+docker build.
+docker run -i -t b6b45241c7e1
+
